@@ -29,13 +29,6 @@ function Header() {
               onClick={() => console.log("btn clicked")}
             />
           </a>
-          <a href="/">
-            <Button
-              outlined={"true"}
-              text={"Share"}
-              onClick={() => console.log("btn clicked")}
-            />
-          </a>
         </div>
         <div className="mobile-drawer">
           <AnchorTemporaryDrawer />

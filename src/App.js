@@ -1,14 +1,13 @@
 import './App.css';
+import Home from './pages/Home';
 // import Footer from './components/Common/Footer';
-import Header from './components/Common/Header';
-import MainComponent from './components/LandingPage/MainComponent';
+
 
 function App() {
   return (
-  <>
-<Header/>
-<MainComponent/>
-  </>
+<>
+  <Home/>
+</>
   );
 }
 
