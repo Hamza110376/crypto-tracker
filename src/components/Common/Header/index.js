@@ -2,6 +2,7 @@ import React from 'react'
 import "./style.css"
 import Button from "../Button/index"
 import AnchorTemporaryDrawer from "./drawer";
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,22 +14,21 @@ function Header() {
           CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
         </h1>
         <div className="links">
-          <a href="/">
+          <Link to="/">
             <p className="link">Home</p>
-          </a>
-          <a href="/">
+          </Link>
+          <Link to="/compare">
             <p className="link">Compare</p>
-          </a>
-          <a href="/">
+          </Link>
+          <Link to="/Watchlist">
             <p className="link">Watchlist</p>
-          </a>
-          <a href="/">
+          </Link>
+          <Link to="/Dashboard">
             <Button
-           
               text={"Dashboard"}
               onClick={() => console.log("btn clicked")}
             />
-          </a>
+          </Link>
         </div>
         <div className="mobile-drawer">
           <AnchorTemporaryDrawer />
