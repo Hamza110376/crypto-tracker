@@ -1,9 +1,17 @@
 .grid-container{
     width: 350px;
-    height: 350px;
     background-color: var(--darkgrey);
     border: 2px solid var(--darkgrey);
     border-radius: 0.75rem;
+     
+}
+.grid-container:hover{
+    border: 3px solid var(--green);
+    transition: all 0.3s ease;
+}
+.grid-container-red:hover{
+    border: 3px solid var(--red);
+transition: all 0.3s ease;
 }
 .info-flex{
     display: flex;
@@ -51,10 +59,21 @@ width: 3.5rem;
     font-size: 1rem;
     color: var(--green);
 }
+.price-chip:hover{
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 0.3s;
+}
 .chip-red{
     border: 2px solid var(--red);
       color: var(--red);
 }
+
+.chip-red:hover{
+    background-color: var(--red);
+      color: var(--white);
+}
+
 .icon-chip{
     border: 2px solid var(--green);
     border-radius: 50%;
@@ -65,6 +84,10 @@ width: 3.5rem;
   align-items: center;
   justify-content: center;
 }
+.icon-chip:hover{
+    background-color: var(--green);
+    color: var(--white);
+}
 .icon-red{
     border: 2px solid var(--red);
     border-radius: 50%;
@@ -74,4 +97,24 @@ width: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.icon-red:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
+.info-container{
+    margin: 1.5rem;
+}
+.info-container h3{
+    color: var(--green);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.volume-container{
+    margin: 1.5rem;
+}
+.total_volume{
+    color: var(--grey);
+    font-size: 1rem;
+    font-weight: 500;
 }

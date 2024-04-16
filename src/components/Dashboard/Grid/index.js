@@ -2,10 +2,15 @@ import React from 'react'
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import TrendingDownIcon from "@mui/icons-material/TrendingDown";
 import "./styles.css"
+import { color } from 'framer-motion';
 
 const Grid = ({coin}) => {
   return (
-    <div className="grid-container">
+    <div
+      className={`grid-container ${
+        coin.price_change_percentage_24h < 0 && "grid-container-red"
+      }`}
+    >
       <div className="info-flex">
         <img src={coin.image} alt="" className="coin-logo" />
         <div className="name-col">
@@ -33,6 +38,27 @@ const Grid = ({coin}) => {
           </div>
         </div>
       )}
+      <div className="info-container">
+        <h3
+          className="coin-price"
+          style={{
+            color:
+              coin.price_change_percentage_24h < 0
+                ? "var(--red)"
+                : "var(--green)",
+          }}
+        >
+          ${coin.current_price.toLocaleString()}
+        </h3>
+      </div>
+      <div className="volume-container">
+        <p className="total_volume">
+          Total Volume: ${coin.total_volume.toLocaleString()}
+        </p>
+        <p className="total_volume">
+          Market Cap: ${coin.market_cap.toLocaleString()}
+        </p>
+      </div>
     </div>
   );
 }
